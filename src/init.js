@@ -19,11 +19,13 @@ function preload() {
 }
 
 function create() {
-    this.tomato = this.add.sprite(100, 100, 'evil_tomato', 1);
+    this.tomato = this.add.sprite(100, 100, 'evil_tomato', 1).setScale(2);
     this.anims.create({
         key: 'tomato_walk',
         frames: this.anims.generateFrameNumbers('evil_tomato', {
-            frames: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+            //frames: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+            start: 1,
+            end: 8
         }),
         repeat: -1,
         frameRate: 10
